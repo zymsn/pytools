@@ -27,17 +27,17 @@ class GetMethod(object):
 '''
 redis_port = [7000,7001,7002,7003,7004,7005]
 for i in redis_port:
-    r = redis.StrictRedis(host='172.31.0.58', port=i, db=0)
-    result = r.keys("TMS*")
+    r = redis.StrictRedis(host='', port=i, db=0)
+    result = r.keys("")
 '''
 
-# redis_port = ['172.31.0.249','172.31.0.251','172.31.0.252']  #test
-redis_port = ['7000','7001','7002']  #beta
+# redis_port = ['']  #test
+redis_port = ['']  #beta
 for i in redis_port:
-    # r = redis.StrictRedis(host=i, port='6379', db=0)
-    r = redis.StrictRedis(host='10.155.90.164', port=i, db=0)
-    # result = r.keys("TMS:INFRASTRUCTURE:PROPERTIES:*")
-    result = r.keys("TMS:DEPOT:DATA:LIST")
+    # r = redis.StrictRedis(host=i, port='', db=0)
+    r = redis.StrictRedis(host='', port=i, db=0)
+    # result = r.keys("")
+    result = r.keys("")
     for key_0 in result:
         print "%s\t%s"%(i,key_0)  #获取redis地址和key
         try:
@@ -73,7 +73,7 @@ for i in redis_port:
 redis_port = [7000,7001,7002,7003,7004,7005]
 for i in redis_port:
     r = redis.StrictRedis(host='172.31.0.58', port=i, db=0)
-    result = r.keys("TMS:SHIPPINGNO:NAQEL")
+    result = r.keys("")
     for key_0 in result:
         print "%s\t%s"%(i,key_0)  #获取redis地址和key
         try:
