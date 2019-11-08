@@ -12,9 +12,9 @@
 
 
 
-redis_host=172.31.0.58
-redis_ports=(7000 7001 7002 7003 7004 7005)
-redis_keys_input=("TMS*" "tms*" "ORDER_SHIPPED*" "SHIPPING_LINE_SATURATION*" "ORDER_SHIPPED_EVERY_DAY")
+redis_host=
+redis_ports=()
+redis_keys_input=("")
 
 echo > ./keys.txt
 for port in ${redis_ports[@]}
