@@ -12,11 +12,11 @@ def string(redis_obj, key):
     return redis_obj.get(key)
 
 #test
-#redis_host = ['172.31.0.249','172.31.0.251','172.31.0.252']
+#redis_host = []
 #beta
-redis_host = ['7000','7001','7002']
+redis_host = []
 for i in redis_host:
-    r = redis.StrictRedis(host='169.46.90.164', port=i, db=0)
+    r = redis.StrictRedis(host='', port=i, db=0)
     result = r.keys("TMS:TRACKINGNO:NAQEL")
     for key_0 in result:
         print "%s\t%s"%(i,key_0)  #获取redis地址和key
